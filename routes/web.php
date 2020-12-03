@@ -13,3 +13,6 @@ Route::get('articles/detail/{id}', [ArticleController::class, 'detail']);
 Route::get('articles/more', function(){
     return redirect()->route('article.detail');
 });
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
