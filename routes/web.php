@@ -24,3 +24,7 @@ Route::get('/articles', function() {
 Route::get('/articles/detail', function() {
     return 'Article Detail';
 });
+
+Route::get('articles/detail/{id}', function($id) {
+    return "Article Detail - $id";
+});
