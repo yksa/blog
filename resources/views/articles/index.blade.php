@@ -2,6 +2,7 @@
 
 @section("content")
     <div class="container">
+    {{ $articles->links() }}
         @foreach($articles as $article)
             <div class="card mb-2">
                 <div class="card-body">
@@ -14,5 +15,6 @@
                 </div>
             </div>
         @endforeach
+    {{ $articles->links() }}
     </div>
 @endsection
