@@ -35,4 +35,14 @@ class ArticleController extends Controller
             'categories' => $data
         ]);
     }
+    public function create(Request $request)
+    {
+        $article = new Article;
+        $article->title = $request->title;
+        $article->body = $request->body;
+        $article->category_id = $request->category_id;
+        $article->save();
+
+        return redirect('/articles');
+    }
 }
