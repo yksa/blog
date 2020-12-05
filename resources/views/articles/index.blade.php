@@ -2,6 +2,14 @@
 
 @section("content")
     <div class="container">
+
+    @if(session('info'))
+        <div class="alert alert-info alert-dismissible fade show" role="alert">
+            {{ session('info')}}
+            <button type="button" data-dismiss="alert" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button>
+        </div>
+    @endif
+
     {{ $articles->links() }}
         @foreach($articles as $article)
             <div class="card mb-2">

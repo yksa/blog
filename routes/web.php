@@ -19,4 +19,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/articles/add', [App\Http\Controllers\ArticleController::class, 'add']);
 Route::post('/articles/add', [App\Http\Controllers\ArticleController::class, 'create']);
-Route::delete('/articles/delete/{id}', [App\Http\Controllers\ArticleController::class, 'delete']);
+Route::get('/articles/delete/{id}', [App\Http\Controllers\ArticleController::class, 'delete']);
