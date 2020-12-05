@@ -2,11 +2,20 @@
 
 @section('content')
     <div class="container">
+    @if($errors->any())
+        <div class="alert alert-warning">
+            <ol>
+                @foreach($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ol>
+        </div>
+    @endif
         <form method="post">
             @csrf 
             <div class="form-group">
                 <label for="title">Title</label>
-                <input type="text" id="title" name="title" class="form-control">
+                <input type="text" id="title" name="title" class="form-control" required>
             </div>
             <div class="form-group">
                 <label for="body">Body</label>
