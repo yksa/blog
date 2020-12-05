@@ -25,4 +25,14 @@ class ArticleController extends Controller
             'article' => $data
         ]);
     }
+    public function add() 
+    {
+        $data = [
+            [ "id" => 1, "name" => "News"],
+            [ "id" => 2, "name" => "Tech"],
+        ];
+        return view('articles.add', [
+            'categories' => $data
+        ]);
+    }
 }
